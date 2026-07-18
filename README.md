@@ -1,142 +1,226 @@
-# StockFlow — Inventory & Order Management System
+````markdown
+# 📦 StockFlow
 
-A full-stack inventory and order management system built with React, FastAPI, PostgreSQL, and Docker.
+<div align="center">
 
-## Tech Stack
+### Inventory & Order Management System
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React 18, React Router, Axios |
-| Backend | Python, FastAPI, SQLAlchemy |
-| Database | PostgreSQL 15 |
-| Containerization | Docker, Docker Compose |
+A modern full-stack application for managing products, inventory, suppliers, and customer orders with a clean dashboard and scalable backend.
 
-## Features
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791?logo=postgresql)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)
 
-- **Product Management** — Add, edit, delete products with SKU, price, and stock
-- **Customer Management** — Register and manage customers
-- **Order Management** — Place orders with automatic stock deduction and total calculation
-- **Dashboard** — Summary stats + low-stock alerts
-- **Business Logic** — Unique SKU/email validation, stock checks, auto total calculation
+</div>
 
 ---
 
-## Run Locally with Docker
+## 📖 Overview
 
-### Prerequisites
-- Docker Desktop installed and running
+StockFlow is a full-stack Inventory and Order Management System designed to simplify inventory tracking and order processing for businesses. It provides an intuitive interface for managing products, monitoring stock levels, and handling customer orders while ensuring efficient backend operations through REST APIs.
+
+---
+
+## ✨ Features
+
+- 📦 Product Management
+- 📊 Inventory Tracking
+- 🛒 Order Management
+- 🔍 Product Search & Filtering
+- 📈 Dashboard Overview
+- ⚡ Fast REST APIs
+- 🗄 PostgreSQL Database
+- 🔒 Secure Backend Architecture
+- 📱 Responsive User Interface
+
+---
+
+## 🏗 Tech Stack
+
+### Frontend
+
+- React 18
+- React Router
+- Axios
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+
+### Backend
+
+- FastAPI
+- Python
+- Pydantic
+- SQLAlchemy
+
+### Database
+
+- PostgreSQL
+
+### DevOps
+
+- Docker
 - Git
-
-### Steps
-
-```bash
-# 1. Clone the repo
-git clone <your-repo-url>
-cd stockflow
-
-# 2. Copy and configure environment
-cp .env.example .env
-# Edit .env if needed (default values work for local)
-
-# 3. Start everything
-docker compose up --build
-
-# 4. Open the app
-# Frontend: http://localhost:3000
-# Backend API docs: http://localhost:8000/docs
-```
-
-To stop: `docker compose down`  
-To wipe data too: `docker compose down -v`
+- GitHub
 
 ---
 
-## API Endpoints
+## 📂 Project Structure
 
-### Products
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /products | List all products |
-| POST | /products | Create product |
-| GET | /products/{id} | Get product |
-| PUT | /products/{id} | Update product |
-| DELETE | /products/{id} | Delete product |
-
-### Customers
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /customers | List all customers |
-| POST | /customers | Create customer |
-| GET | /customers/{id} | Get customer |
-| DELETE | /customers/{id} | Delete customer |
-
-### Orders
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /orders | List all orders |
-| POST | /orders | Create order |
-| GET | /orders/{id} | Get order details |
-| DELETE | /orders/{id} | Cancel order |
-
-### Dashboard
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /dashboard | Get summary stats |
-
-Full interactive docs at `/docs` (Swagger UI).
-
----
-
-## Deployment
-
-### Backend → Render
-
-1. Push code to GitHub
-2. Create new **Web Service** on [render.com](https://render.com)
-3. Set root directory: `backend`
-4. Build command: `pip install -r requirements.txt`
-5. Start command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-6. Add environment variable: `DATABASE_URL` (from Render PostgreSQL)
-
-### Frontend → Vercel
-
-1. Go to [vercel.com](https://vercel.com), import repo
-2. Set root directory: `frontend`
-3. Add environment variable: `REACT_APP_API_URL=https://your-backend.onrender.com`
-4. Deploy
-
----
-
-## Project Structure
-
-```
-stockflow/
-├── backend/
-│   ├── app/
-│   │   ├── main.py          # FastAPI app entry point
-│   │   ├── models.py        # SQLAlchemy models
-│   │   ├── schemas.py       # Pydantic schemas
-│   │   ├── database.py      # DB connection
-│   │   ├── config.py        # Settings
-│   │   └── routers/
-│   │       ├── products.py
-│   │       ├── customers.py
-│   │       ├── orders.py
-│   │       └── dashboard.py
-│   ├── Dockerfile
-│   └── requirements.txt
+```text
+StockFlow
+│
 ├── frontend/
 │   ├── src/
-│   │   ├── App.js
-│   │   ├── api/index.js
-│   │   ├── components/Sidebar.js
-│   │   └── pages/
-│   │       ├── Dashboard.js
-│   │       ├── Products.js
-│   │       ├── Customers.js
-│   │       └── Orders.js
-│   ├── Dockerfile
-│   └── nginx.conf
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   └── assets/
+│
+├── backend/
+│   ├── app/
+│   ├── routes/
+│   ├── models/
+│   ├── schemas/
+│   ├── database/
+│   └── main.py
+│
 ├── docker-compose.yml
-└── .env.example
+├── requirements.txt
+└── README.md
 ```
+
+---
+
+## 🚀 Getting Started
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/kunalk077/StockFlow.git
+```
+
+```bash
+cd StockFlow
+```
+
+---
+
+### Backend Setup
+
+```bash
+cd backend
+
+python -m venv venv
+```
+
+Activate the virtual environment.
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the backend:
+
+```bash
+uvicorn app.main:app --reload
+```
+
+---
+
+### Frontend Setup
+
+```bash
+cd frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots inside an **assets/** folder.
+
+Example:
+
+```text
+assets/
+├── dashboard.png
+├── inventory.png
+├── orders.png
+└── products.png
+```
+
+Then display them like this:
+
+```markdown
+## Dashboard
+
+![Dashboard](assets/dashboard.png)
+
+## Products
+
+![Products](assets/products.png)
+
+## Orders
+
+![Orders](assets/orders.png)
+```
+
+---
+
+## 🔮 Future Enhancements
+
+- User Authentication & Authorization
+- Barcode / QR Code Support
+- Analytics Dashboard
+- Sales Reports
+- Email Notifications
+- Cloud Deployment
+- Export Reports (PDF / Excel)
+- Role-Based Access Control
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Push to your branch
+5. Open a Pull Request
+
+---
+
+## 📬 Contact
+
+**Kunal Tyagi**
+
+- GitHub: https://github.com/kunalk077
+- LinkedIn: https://www.linkedin.com/in/kunal-tyagi-589745258/
+- Email: kunaltyagi190@gmail.com
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project useful, consider giving it a star!
+
+</div>
+````
