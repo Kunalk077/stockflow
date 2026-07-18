@@ -1,113 +1,97 @@
-
-# 📦 StockFlow
+<p align="center">
+  <img src="stockflow-banner.png" alt="StockFlow Banner" width="100%">
+</p>
 
 <div align="center">
 
+# 📦 StockFlow
+
 ### Inventory & Order Management System
 
-A modern full-stack application for managing products, inventory, suppliers, and customer orders with a clean dashboard and scalable backend.
+**Track • Manage • Grow**
 
-![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791?logo=postgresql)
-![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)
+A modern Full-Stack Inventory & Order Management System built to simplify inventory tracking, product management, and customer order processing.
+
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 </div>
 
 ---
 
-## 📖 Overview
+# 🌌 About
 
-StockFlow is a full-stack Inventory and Order Management System designed to simplify inventory tracking and order processing for businesses. It provides an intuitive interface for managing products, monitoring stock levels, and handling customer orders while ensuring efficient backend operations through REST APIs.
+StockFlow is a modern **Inventory & Order Management System** designed to help businesses efficiently manage inventory, products, and customer orders from a single platform.
+
+The application combines a responsive React frontend with a FastAPI backend and PostgreSQL database, providing a scalable and maintainable architecture for real-world inventory management.
 
 ---
 
-## ✨ Features
+# ✨ Features
 
 - 📦 Product Management
 - 📊 Inventory Tracking
 - 🛒 Order Management
-- 🔍 Product Search & Filtering
-- 📈 Dashboard Overview
+- 👥 Customer Management
+- 🔍 Search & Filtering
+- 📈 Dashboard & Analytics
 - ⚡ Fast REST APIs
-- 🗄 PostgreSQL Database
-- 🔒 Secure Backend Architecture
-- 📱 Responsive User Interface
+- 🔒 Secure Backend
+- 📱 Responsive Interface
 
 ---
 
-## 🏗 Tech Stack
+# ⚙ Tech Stack
 
-### Frontend
-
-- React 18
-- React Router
-- Axios
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-
-### Backend
-
-- FastAPI
-- Python
-- Pydantic
-- SQLAlchemy
-
-### Database
-
-- PostgreSQL
-
-### DevOps
-
-- Docker
-- Git
-- GitHub
+| Frontend | Backend | Database | DevOps |
+|----------|----------|----------|---------|
+| React 18 | FastAPI | PostgreSQL | Docker |
+| React Router | SQLAlchemy | Relational DB | Docker Compose |
+| Axios | Pydantic | | Git |
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```text
-StockFlow
+stockflow
 │
-├── frontend/
-│   ├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── services/
-│   └── assets/
-│
-├── backend/
-│   ├── app/
-│   ├── routes/
-│   ├── models/
-│   ├── schemas/
-│   ├── database/
+├── backend
+│   ├── app
+│   ├── routes
+│   ├── models
+│   ├── database
 │   └── main.py
 │
+├── frontend
+│   ├── src
+│   ├── components
+│   ├── pages
+│   └── assets
+│
 ├── docker-compose.yml
-├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+# 🚀 Getting Started
 
-### Clone the Repository
+## Clone Repository
 
 ```bash
-git clone https://github.com/kunalk077/StockFlow.git
+git clone https://github.com/Kunalk077/stockflow.git
 ```
 
 ```bash
-cd StockFlow
+cd stockflow
 ```
 
 ---
 
-### Backend Setup
+## Backend
 
 ```bash
 cd backend
@@ -115,15 +99,21 @@ cd backend
 python -m venv venv
 ```
 
-Activate the virtual environment.
+Activate virtual environment
 
-Install dependencies:
+Windows
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the backend:
+Run server
 
 ```bash
 uvicorn app.main:app --reload
@@ -131,19 +121,19 @@ uvicorn app.main:app --reload
 
 ---
 
-### Frontend Setup
+## Frontend
 
 ```bash
 cd frontend
 ```
 
-Install dependencies:
+Install packages
 
 ```bash
 npm install
 ```
 
-Start the development server:
+Run development server
 
 ```bash
 npm run dev
@@ -151,76 +141,67 @@ npm run dev
 
 ---
 
-## 📸 Screenshots
+# 📊 Core Modules
 
-> Add screenshots inside an **assets/** folder.
-
-Example:
-
-```text
-assets/
-├── dashboard.png
-├── inventory.png
-├── orders.png
-└── products.png
-```
-
-Then display them like this:
-
-```markdown
-## Dashboard
-
-![Dashboard](assets/dashboard.png)
-
-## Products
-
-![Products](assets/products.png)
-
-## Orders
-
-![Orders](assets/orders.png)
-```
+- Inventory Management
+- Product Management
+- Order Processing
+- Customer Management
+- Dashboard
+- Reports
+- Search & Filtering
 
 ---
 
-## 🔮 Future Enhancements
+# 🎯 Future Improvements
 
-- User Authentication & Authorization
-- Barcode / QR Code Support
-- Analytics Dashboard
-- Sales Reports
-- Email Notifications
-- Cloud Deployment
-- Export Reports (PDF / Excel)
-- Role-Based Access Control
+- 🔐 User Authentication
+- 👨‍💼 Role Based Access
+- 📱 Mobile Responsive Improvements
+- 📧 Email Notifications
+- 📊 Advanced Analytics
+- 📦 Barcode Scanner
+- 📄 PDF Report Export
+- ☁ Cloud Deployment
 
 ---
 
-## 🤝 Contributing
+# 🤝 Contributing
 
-Contributions are welcome.
+Contributions are always welcome.
 
 1. Fork the repository
-2. Create a new branch
+
+2. Create a feature branch
+
 3. Commit your changes
-4. Push to your branch
+
+4. Push to GitHub
+
 5. Open a Pull Request
 
 ---
 
-## 📬 Contact
+# 👨‍💻 Developer
 
 **Kunal Tyagi**
 
-- GitHub: https://github.com/kunalk077
-- LinkedIn: https://www.linkedin.com/in/kunal-tyagi-589745258/
-- Email: kunaltyagi190@gmail.com
+📧 kunaltyagi190@gmail.com
+
+💼 LinkedIn
+
+https://www.linkedin.com/in/kunal-tyagi-589745258/
+
+🐙 GitHub
+
+https://github.com/Kunalk077
 
 ---
 
 <div align="center">
 
-### ⭐ If you found this project useful, consider giving it a star!
+### ⭐ If you found this project useful, consider giving it a Star!
+
+**Built with ❤️ by Kunal Tyagi**
 
 </div>
-````
