@@ -1,4 +1,4 @@
-````markdown
+
 # 📦 StockFlow
 
 <div align="center">
